@@ -1,2 +1,1 @@
-# restaurant-reviews-app
-Restaurant Reviews App
+# Restaurant Reviews App
