@@ -1,7 +1,6 @@
 const staticCacheName = 'rest-rev-static-v1';
-
+//yay
 self.addEventListener('install', function(event) {
-  debugger;
   event.waitUntil(
     caches.open(staticCacheName).then(function(cache) {
       return cache.addAll([
