@@ -1,7 +1,7 @@
 {
   "name": "Restaurant Reviews",
   "short_name": "Reviewer",
-  "start_url": "/",
+  "start_url": "https://nifty-joliot-516862.netlify.com/",
   "icons": [
   {
     "src": "/img/icons-192.png",
