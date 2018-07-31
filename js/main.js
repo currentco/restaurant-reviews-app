@@ -159,7 +159,7 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
   const image = document.createElement('img');
-  image.className = 'restaurant-img js-lazy-image';
+  image.className = 'restaurant-img';
   image.alt = 'restaurant';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
@@ -182,45 +182,6 @@ createRestaurantHTML = (restaurant) => {
   li.append(more)
 
   return li
-}
-
-// Get all of the images that are marked up to lazy load
-const images = document.querySelectorAll('.js-lazy-image');
-const config = {
-  // If the image gets within 50px in the Y axis, start the download.
-  rootMargin: '50px 0px',
-  threshold: 0.01
-};
-
-// The observer for the images on the page
-let observer = new IntersectionObserver(onIntersection, config);
-  images.forEach(image => {
-    observer.observe(image);
-  });
-
-function onIntersection(entries) {
-  // Loop through the entries
-  entries.forEach(entry => {
-    // Are we in viewport?
-    if (entry.intersectionRatio > 0) {
-
-      // Stop watching and load the image
-      observer.unobserve(entry.target);
-      preloadImage(entry.target);
-    }
-  });
-}
-
-// If we don't have support for intersection observer, load the images immediately
-if (!('IntersectionObserver' in window)) {
-  Array.from(images).forEach(image => preloadImage(image));
-} else {
-  // It is supported, load the images
-  observer = new IntersectionObserver(onIntersection, config);
-  images.forEach(image => {
- 
-   observer.observe(image);
-  });
 }
 
 /**
