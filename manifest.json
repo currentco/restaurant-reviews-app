@@ -1,0 +1,8 @@
+{
+  "name": "Restaurant Reviews",
+  "short_name": "Reviewer",
+  "start_url": "/?home=true",
+  "theme_color": "#3367D6",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+}
