@@ -1,7 +1,19 @@
 {
   "name": "Restaurant Reviews",
   "short_name": "Reviewer",
-  "start_url": "/?home=true",
+  "start_url": "/",
+  "icons": [
+  {
+    "src": "/img/icons-192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  },
+  {
+    "src": "/img/icons-512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }
+  ],
   "theme_color": "#3367D6",
   "background_color": "#FFFFFF",
   "display": "standalone",
