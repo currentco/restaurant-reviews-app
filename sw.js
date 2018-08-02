@@ -47,7 +47,9 @@ self.addEventListener('fetch', function(event) {
   var requestUrl = new URL(event.request.url);
 
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request, {
+      ignoreSearch: true
+    }).then(function(response) {
       return response || fetch(event.request);
     })
   );
